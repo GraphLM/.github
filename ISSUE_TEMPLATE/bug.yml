@@ -1,0 +1,43 @@
+name: Bug
+description: Report something that isn't working correctly
+labels: ["bug"]
+body:
+  - type: input
+    id: what
+    attributes:
+      label: What's wrong
+      description: One sentence — what is broken?
+      placeholder: e.g. Branch-off from a child node creates the edge pointing back to root
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps to trigger the bug
+      placeholder: |
+        1. Open a workspace with 3+ nodes
+        2. Right-click a child node → "Branch off"
+        3. Observe the new edge target
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-vs-actual
+    attributes:
+      label: Expected vs Actual
+      description: What should happen and what happens instead
+      placeholder: |
+        Expected: Edge connects new node to the child I branched from
+        Actual: Edge connects new node back to the root node
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Optional — paste screenshots or screen recordings
+    validations:
+      required: false

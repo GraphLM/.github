@@ -1,0 +1,42 @@
+name: Feature
+description: Propose a new feature or enhancement
+labels: []
+body:
+  - type: input
+    id: what
+    attributes:
+      label: What
+      description: One sentence — what should be built?
+      placeholder: e.g. Add cmd+K search across all workspaces
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: One sentence — what user or dev problem does this solve?
+      placeholder: e.g. Users can't find old conversations once they have 10+ nodes
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Bullet list of what's included (and optionally what's NOT included to keep the issue small)
+      placeholder: |
+        - Search within a single workspace
+        - Highlight matching node on canvas
+        - NOT: cross-workspace search (separate issue)
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Related issues, screenshots, design links, or inspiration
+      placeholder: "e.g. Related: #72, screenshot below"
+    validations:
+      required: false
